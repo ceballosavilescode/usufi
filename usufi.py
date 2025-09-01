@@ -49,6 +49,7 @@ import numpy as np
 from pathlib import Path
 import pandas as pd
 import re
+import time
 
 def leer_csv_robusto(f):
 	"""Intenta leer un CSV probando múltiples encodings y separadores."""
