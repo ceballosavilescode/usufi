@@ -220,7 +220,7 @@ def tabla_dinamica():
 class Usufi(object):
 	usufi = pd.DataFrame()
 	ruta_archivos = os.path.join(os.getcwd(), "*.csv")
-	print(ruta_archivos)
+	print(ruta_archivos) 
 	time.sleep(5)
 	print("estoy buscando el archivo...!")
 	time.sleep(5)
