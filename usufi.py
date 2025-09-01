@@ -218,6 +218,7 @@ def tabla_dinamica():
 
 
 class Usufi(object):
+	print("estoy en class Usufi(object):")
 	usufi = pd.DataFrame()
 	ruta_archivos = os.path.join(os.getcwd(), "*.csv")
 	print(ruta_archivos) 
