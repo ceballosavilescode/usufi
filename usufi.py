@@ -17,6 +17,25 @@
 #  escrito del autor.
 # ==============================================================
 
+# --- Guardias contra doble ejecución ---
+import os, sys, tempfile
+
+# Evita que el flujo se ejecute si el módulo se importa/exec-uta otra vez
+if not hasattr(sys.modules[__name__], "_USUFI_RUN_ONCE"):
+    _USUFI_RUN_ONCE = True
+else:
+    sys.exit(0)
+
+# Lock de proceso simple (por si se dispara dos veces al mismo tiempo)
+_lock_path = os.path.join(tempfile.gettempdir(), "usufi.run.lock")
+try:
+    _lock_fd = os.open(_lock_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+except FileExistsError:
+    # Ya hay otra instancia corriendo
+    sys.exit(0)
+
+
+
 import sqlalchemy
 import pandas as pd
 import glob
