@@ -228,7 +228,7 @@ class Usufi(object):
 	print(usufi.columns)
 	limpiar_data(usufi)
 	tabla_dinamica()
-
+	print("tabla_dinamica")
 
 if __name__ == '__main__':
 	Usufi()
