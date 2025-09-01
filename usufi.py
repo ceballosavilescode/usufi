@@ -221,8 +221,10 @@ class Usufi(object):
 	usufi = pd.DataFrame()
 	ruta_archivos = os.path.join(os.getcwd(), "*.csv")
 	print("estoy buscando el archivo...!")
+	time.sleep(5)
 	for f in glob.glob(ruta_archivos, recursive=True):
 		print('Procesando  : ', f)
+		time.sleep(5)
 		#df = pd.read_csv(f)
 		df = leer_csv_robusto(f)
 		usufi = pd.concat([usufi, df], ignore_index=True)
