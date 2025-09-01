@@ -223,7 +223,7 @@ class Usufi(object):
 	print("estoy buscando el archivo...!")
 	time.sleep(5)
 	for f in glob.glob(ruta_archivos, recursive=True):
-		print('Procesando  : ', f)
+		print('Procesando  .: ', f)
 		time.sleep(5)
 		#df = pd.read_csv(f)
 		df = leer_csv_robusto(f)
