@@ -2,7 +2,7 @@
 #  Archivo  : usufi.py
 #  Autor    : Héctor Ceballos
 #  Fecha    : 2025-08-31
-# 
+#  
 #  Derechos Reservados © Héctor Ceballos.
 #
 #  Este código ha sido desarrollado íntegramente por el autor en
