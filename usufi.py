@@ -218,23 +218,27 @@ def tabla_dinamica():
 
 
 class PlazoDeLaDeuda(object):
-	print("estoy en class Usufi(object):")
-	usufi = pd.DataFrame()
-	ruta_archivos = os.path.join(os.getcwd(), "*.csv")
-	print(ruta_archivos) 
-	time.sleep(5)
-	print("estoy buscando el archivo...!")
-	time.sleep(5)
-	for f in glob.glob(ruta_archivos, recursive=True):
-		print('Procesando  .: ', f)
-		time.sleep(5)
-		#df = pd.read_csv(f)
-		df = leer_csv_robusto(f)
-		usufi = pd.concat([usufi, df], ignore_index=True)
+	def __init__(self, variables):
 
-	print(usufi.columns)
-	limpiar_data(usufi)
-	tabla_dinamica()
+		print("✅ Acceso permitido", variables)
+
+		print("estoy en class Usufi(object):")
+		usufi = pd.DataFrame()
+		ruta_archivos = os.path.join(os.getcwd(), "*.csv")
+		print(ruta_archivos) 
+		time.sleep(5)
+		print("estoy buscando el archivo...!")
+		time.sleep(5)
+		for f in glob.glob(ruta_archivos, recursive=True):
+			print('Procesando  .: ', f)
+			time.sleep(5)
+			#df = pd.read_csv(f)
+			df = leer_csv_robusto(f)
+			usufi = pd.concat([usufi, df], ignore_index=True)
+	
+		print(usufi.columns)
+		limpiar_data(usufi)
+		tabla_dinamica()
 
 if __name__ == '__main__':
 	PlazoDeLaDeuda()
