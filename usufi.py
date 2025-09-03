@@ -218,9 +218,9 @@ def tabla_dinamica():
 
 
 class PlazoDeLaDeuda(object):
-	def __init__(self, variables):
+	def __init__(self):
 
-		print("✅ Acceso permitido", variables)
+		print("✅ Acceso permitido")
 
 		print("estoy en class Usufi(object):")
 		usufi = pd.DataFrame()
