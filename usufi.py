@@ -217,7 +217,7 @@ def tabla_dinamica():
 		tabla.to_excel(writer, sheet_name='Creado por Héctor Ceballos')
 
 
-class Usufi(object):
+class PlazoDeLaDeuda(object):
 	print("estoy en class Usufi(object):")
 	usufi = pd.DataFrame()
 	ruta_archivos = os.path.join(os.getcwd(), "*.csv")
@@ -237,4 +237,4 @@ class Usufi(object):
 	tabla_dinamica()
 
 if __name__ == '__main__':
-	Usufi()
+	PlazoDeLaDeuda()
